@@ -9,29 +9,34 @@
     <meta name="generator" content="Retype 3.0.2">
 
     <!-- Primary Meta Tags -->
-    <title>Authentication</title>
-    <meta name="title" content="Authentication">
+    <title>Device ID</title>
+    <meta name="title" content="Device ID">
+    <meta name="description" content="Create a new unique pseudo-account that can be used to identify the current user profile on the local device." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="/authentication/" />
+    <link rel="canonical" href="/authentication/device-id/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/authentication/">
-    <meta property="og:title" content="Authentication">
+    <meta property="og:url" content="/authentication/device-id/">
+    <meta property="og:title" content="Device ID">
+    <meta property="og:description" content="Create a new unique pseudo-account that can be used to identify the current user profile on the local device.">
+    <meta property="og:image" content="/static/screenshot_13.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/authentication/">
-    <meta property="twitter:title" content="Authentication">
+    <meta property="twitter:url" content="/authentication/device-id/">
+    <meta property="twitter:title" content="Device ID">
+    <meta property="twitter:description" content="Create a new unique pseudo-account that can be used to identify the current user profile on the local device.">
+    <meta property="twitter:image" content="/static/screenshot_13.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.0.2.738967473573" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=3.0.2.738967473573" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=3.0.2.738967473573" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../resources/js/retype.js?v=3.0.2" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=3.0.2.738967473573" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.2.738967473573" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/retype.js?v=3.0.2" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.2.738967473573" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -46,7 +51,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">EOS Integration Kit</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">V2</span>
                     </div>
@@ -205,12 +210,60 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="authentication" class="break-words">
+<doc-anchor-target id="device-id" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication">#</doc-anchor-trigger>
-        <span>Authentication</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#device-id">#</doc-anchor-trigger>
+        <span>Device ID</span>
     </h1>
 </doc-anchor-target>
+<p>Create a new unique pseudo-account that can be used to identify the current user profile on the local device. This function is intended to be used by mobile games and PC games that wish to allow a new user to start playing without requiring to login to the game using any user identity.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Overlay Settings should be turned off to use this login method</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="blueprint-code">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#blueprint-code">#</doc-anchor-trigger>
+        <span>Blueprint Code</span>
+    </h3>
+</doc-anchor-target>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="https://blueprintue.com/render/fitd23-_/" allowfullscreen></iframe>
+    </div>
+</figure>
+</p>
+<doc-anchor-target id="important-notes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#important-notes">#</doc-anchor-trigger>
+        <span>Important Notes</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li><p>This method can be used only for PC and Mobile</p>
+</li>
+<li><p>Remember, Device ID logins are local, that means they have data stored on local toolchain and if something happens, everything is lost. So it&#x27;s suggested to link to a external method later.</p>
+</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../static/screenshot_13.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -220,20 +273,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../getting-started/configuration/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../authentication/developer-tool/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Configuration</span>
+                                                <span class="block mt-1">Developer Tool</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../authentication/account-portal/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../authentication/epic-launcher/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Account Portal</span>
+                                                <span class="block mt-1">Epic Launcher</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -277,6 +330,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Authentication", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Device ID", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
