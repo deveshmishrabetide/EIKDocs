@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.2.751350296355">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.2.751350756230">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.2">
@@ -11,6 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Leaderboards</title>
     <meta name="title" content="Leaderboards">
+    <meta name="description" content="Go to Leaderboards under Progression in Game Services and then press on Create Leaderboard" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://eik.betide.studio/other-functions/leaderboards/" />
@@ -19,19 +20,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eik.betide.studio/other-functions/leaderboards/">
     <meta property="og:title" content="Leaderboards">
+    <meta property="og:description" content="Go to Leaderboards under Progression in Game Services and then press on Create Leaderboard">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://eik.betide.studio/other-functions/leaderboards/">
     <meta property="twitter:title" content="Leaderboards">
+    <meta property="twitter:description" content="Go to Leaderboards under Progression in Game Services and then press on Create Leaderboard">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.0.2.751350296355" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=3.0.2.751350756230" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.2.751350296355" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.2.751350756230" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=3.0.2" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.2.751350296355" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.2.751350756230" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -199,6 +202,43 @@
         <span>Leaderboards</span>
     </h1>
 </doc-anchor-target>
+<p><a href="https://youtu.be/tCuE6YOg_-I?si=saGI9DT7IiF_DwjO" target="_blank" class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-red-600 bg-red-100 border border-red-100 hover:border-red-200 dark:hover:bg-red-200 transition-colors duration-200 ease-out h-8 px-4 text-base rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M0 4.75C0 3.784.784 3 1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 22.25 21H1.75A1.75 1.75 0 0 1 0 19.25Zm1.75-.25a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V4.75a.25.25 0 0 0-.25-.25Z"/><path d="M9 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842L9.77 16.005a.5.5 0 0 1-.77-.42Z"/></g></svg></span>
+    <span>Video Tutorial</span>
+</a></p>
+<doc-anchor-target id="create-leaderboard">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create-leaderboard">#</doc-anchor-trigger>
+        <span>Create Leaderboard</span>
+    </h3>
+</doc-anchor-target>
+<p>Go to Leaderboards under Progression in Game Services and then press on Create Leaderboard</p>
+<p><figure class="content-center">
+    <img src="../image-8.png" alt="Create Leaderboard" />
+    <figcaption class="caption">Create Leaderboard</figcaption>
+</figure>
+</p>
+<p>You just need to put the Leaderboard Name, and connect a stat to the leaderboard. Now if you want a time-based leaderboard, then you can select End Time or else, just tick <code v-pre>Never Expire this leaderboard</code>.</p>
+<p><figure class="content-center">
+    <img src="../image-9.png" alt="Leaderboard" />
+    <figcaption class="caption">Leaderboard</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="get-leaderboard">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-leaderboard">#</doc-anchor-trigger>
+        <span>Get Leaderboard</span>
+    </h3>
+</doc-anchor-target>
+<p>You can get the leaderboard by using the below function. It will return the leaderboard in a struct. You will notice it has a Range and Around Range input fields. Range is the number of entries you want to get from the leaderboard and Around Range is the number of entries you want to get around the player&#x27;s rank.</p>
+<p>So for example, if you want the first 200 entries from the leaderboard, then you can set Range to 100 and Around Range to 100. This will give you the entries from 0 to 200</p>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="https://blueprintue.com/render/xzinfj9m/" allowfullscreen></iframe>
+    </div>
+</figure>
+</p>
 
                                 
                                 <!-- Required only on API pages -->
