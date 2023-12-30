@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.756645906915">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.757283875003">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -32,11 +32,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.756645906915" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.757283875003" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.756645906915" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.757283875003" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.756645906915" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.757283875003" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -53,7 +53,7 @@
                     <div class="flex items-center px-2 md:px-6">
                         <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">EOS Integration Kit</span>
-                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">V2.6</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">V3.0.1</span>
                     </div>
         
                     <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -209,10 +209,79 @@
 </doc-anchor-target>
 <p>EOS Integration Kit has a built-in anti-cheat system that is enabled by default. It is based on the <a href="https://www.easy.ac/en-us/">Easy Anti Cheat</a> system. It is a server-side anti-cheat system, meaning that it is not possible to cheat on the client-side or that&#x27;s what the purpose is xD.</p>
 <p><figure class="content-center">
-    <img src="../image.png" alt="Image 1">
-    <figcaption class="caption">Image 1</figcaption>
+    <img src="../image.png" alt="How EOS Anti Cheat works?">
+    <figcaption class="caption">How EOS Anti Cheat works?</figcaption>
 </figure>
 </p>
+<p>So, let&#x27;s see how we can use it in our game.</p>
+<doc-anchor-target id="how-to-use-it">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to-use-it">#</doc-anchor-trigger>
+        <span>How to use it?</span>
+    </h2>
+</doc-anchor-target>
+<p>So for implementing this, assume that we have two levels in our game. One is the main menu and the other is the game level. All the below steps are to be done in the game level and the respective blueprints have to be used. So for example, <code v-pre>PlayerController</code> of the game level will be the Controller I am referring to in the following steps.</p>
+<doc-anchor-target id="1-setup-game-mode">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-setup-game-mode">#</doc-anchor-trigger>
+        <span>1. Setup Game Mode</span>
+    </h3>
+</doc-anchor-target>
+<p>First of all, <code v-pre>OnPostLogin</code> event of the <code v-pre>GameMode</code> has to be overridden. In this event, we have to call the <code v-pre>Register Client For Anti-Cheat</code> blueprint node from Anti-Cheat Server and pass the <code v-pre>PlayerController</code> as the parameter along with Client Product ID. This will register the player with the anti-cheat system.</p>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="https://blueprintue.com/render/111z3ihv/" allowfullscreen></iframe>
+    </div>
+</figure>
+</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>For your information, <code v-pre>EOS_AntiCheatServer_RegisterClient</code> is the C++ function that is called by the blueprint node.</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="2-setup-player-controller">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-setup-player-controller">#</doc-anchor-trigger>
+        <span>2. Setup Player Controller</span>
+    </h3>
+</doc-anchor-target>
+<p>There are basically three things that have to be done in the <code v-pre>PlayerController</code> blueprint. Let&#x27;s see them one by one.</p>
+<ul>
+<li><p>Setup Event BeginPlay to call <code v-pre>RegisterAntiCheatClient</code> from Anti-Cheat Client. This will initialize the anti-cheat system for the player. Make sure this is done locally only.</p>
+</li>
+<li><p>Second sub step would be to register calls from EOS SDK which would inform you to forward some messages to the anti-cheat server. Bind to <code v-pre>OnSendMessageToServer</code> event and call a new custom event like in the below graph which will forward to the game server.</p>
+</li>
+<li><p>Create a custom event to receive messages from the server and forward them to the anti-cheat client.</p>
+</li>
+</ul>
+<p>Make it like the functions below-&gt;</p>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="https://blueprintue.com/render/tdmbuwgk/" allowfullscreen></iframe>
+    </div>
+</figure>
+</p>
+<doc-anchor-target id="3-generate-anti-cheat-files">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-generate-anti-cheat-files">#</doc-anchor-trigger>
+        <span>3. Generate Anti-Cheat Files</span>
+    </h3>
+</doc-anchor-target>
+<p>Now the code setup is done, we have to generate the anti-cheat files. For this, we have to run the <code v-pre>GenerateAntiCheatFiles</code> command from the console. This will generate the required files in the <code v-pre>AntiCheat</code> folder.</p>
 
                                 
                                 <!-- Required only on API pages -->
